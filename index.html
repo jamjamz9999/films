@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Asenjo Films | Cinematic Storytelling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'ferrari-red': '#D90000',
+              'dark-primary': '#181818',
+              'dark-secondary': '#212121',
+              'light-gray': '#E0E0E0',
+              'gold-cream': '#E0C097',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @keyframes breathe {
+        0%, 100% { filter: brightness(0.9); }
+        50% { filter: brightness(1.1); }
+      }
+      .animate-breathe {
+        animation: breathe 8s ease-in-out infinite;
+      }
+      
+      @keyframes button-breathe {
+        0%, 100% { filter: brightness(1); }
+        50% { filter: brightness(0.85); }
+      }
+      .animate-button-breathe {
+        animation: button-breathe 8s ease-in-out infinite;
+      }
+      
+      /* Page Transitions */
+      .page-enter {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .page-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 500ms ease-out, transform 500ms ease-out;
+      }
+      .page-exit {
+        opacity: 1;
+      }
+      .page-exit-active {
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+      }
+
+      /* Scroll-triggered Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+
+      /* NavLink Underline Effect */
+      .nav-link-underline {
+        position: relative;
+        text-decoration: none;
+      }
+      .nav-link-underline::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #D90000;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+      .nav-link-underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background: linear-gradient(-45deg, #220000, #1a1a1a, #000000, #1a1a1a);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+      }
+
+      /* Letter Bounce-in Animation */
+      @keyframes letter-bounce-in {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        60% {
+            opacity: 1;
+            transform: translateY(-10%);
+        }
+        80% {
+            transform: translateY(5%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+      }
+      .animate-letter-bounce {
+          display: inline-block;
+          opacity: 0;
+          animation-name: letter-bounce-in;
+          animation-duration: 0.8s;
+          animation-fill-mode: forwards;
+          animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
