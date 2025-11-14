@@ -1,8 +1,7 @@
 
 import { PortfolioItem, MegaMenuContent } from './types';
-import { LOGO_DATA_URL } from './images/logo';
 
-export { LOGO_DATA_URL };
+export const LOGO_DATA_URL = '/logo.png';
 
 export const portfolioItems: PortfolioItem[] = [
   {
