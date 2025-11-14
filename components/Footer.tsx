@@ -60,7 +60,6 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
                     <a href="mailto:hello@nickasenjofilms.com" className="block hover:text-white transition-colors duration-300">hello@nickasenjofilms.com</a>
                     <a href="tel:+15551234567" className="block hover:text-white transition-colors duration-300">+1 (555) 123-4567</a>
                     <p>123 Cinema Drive,<br/>Hollywood, CA 90028</p>
-                    <a href="#" className="block text-ferrari-red hover:underline">Google Business Page</a>
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.nickasenjofilms.com/contact&color=ffffff&bgcolor=000000" alt="Contact QR Code" className="mt-4 mx-auto md:mx-0" />
                  </div>
               </div>

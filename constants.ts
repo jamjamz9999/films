@@ -1,6 +1,6 @@
 
 import { PortfolioItem, MegaMenuContent } from './types';
-import { LOGO_DATA_URL } from '../images/logo';
+import { LOGO_DATA_URL } from './images/logo';
 
 export { LOGO_DATA_URL };
 
